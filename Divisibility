@@ -1,0 +1,34 @@
+/*
+You are provided an array A of size N that contains non-negative integers. Your task is to determine whether the number that is formed by selecting the last digit of all the N numbers is divisible by 10.
+Note: View the sample explanation section for more clarification.
+
+Input format
+First line: A single integer N denoting the size of array A
+Second line: N space-separated integers.
+
+Output format
+If the number is divisible by 10, then print Yes. Otherwise, print No.
+*/
+
+import java.util.Scanner;
+import java.lang.Math;
+
+class Divisibility {
+    public static void main(String args[] ) throws Exception {
+        Scanner input = new Scanner(System.in);
+        int N = Math.abs(input.nextInt());
+        int[] A = new int[N];
+        //add elements into array
+        for(int i = 0; i < N; i++){
+            A[i] = input.nextInt();
+        }
+        //conditions
+        if(A[N-1]%10 == 0){
+            System.out.printf("%s%n", "Yes");
+        }
+        else{
+        System.out.printf("%s%n", "No");
+        }
+        input.close();
+    }
+}
