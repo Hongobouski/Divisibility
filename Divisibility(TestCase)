@@ -22,7 +22,7 @@ class Divisibility {
         for(int i = 0; i < N; i++){
             A[i] = input.nextInt();
         }
-        //conditions
+        //The only condition that needed to be met is it need to be able to be divided by 10 and a number is divisible by 10 if the last digit of the number is 0.
         if(A[N-1]%10 == 0){
             System.out.printf("%s%n", "Yes");
         }
