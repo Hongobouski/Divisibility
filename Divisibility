@@ -1,0 +1,33 @@
+import java.util.Scanner;
+import java.lang.Math.abs;
+
+class Divisibility {
+    public static void main(String args[] ) throws Exception {
+        System.out.printf("%s","Please enter the size of your array: ");
+        Scanner input = new Scanner(System.in);
+        int N = Math.abs(input.nextInt());
+        int[] A = new int[N];
+        //add element into array
+        for(int i = 0; i < N; i++){
+            System.out.printf("%s%d%s","Please enter element number ", i+1, ":");
+            int num = Math.abs(input.nextInt());
+            int lastDigit = num%10;
+            A[i] = lastDigit;
+        }
+        //convert all array elements into one string
+        StringBuilder builder = new StringBuilder();
+        for(int num: A){
+            builder.append(num);
+        }
+        //convert string into int
+        int divNum = Integer.parseInt(builder.toString());
+
+        if(divNum%10 == 0){
+            System.out.printf("%s%n", "Yes");
+        }
+        else{
+        System.out.printf("%s%n", "No");
+        }
+        input.close();
+    }
+}
